@@ -8,11 +8,12 @@ import Exemplo1 from "./Exemplo1";
 import { UserContextProvider } from "./Components/UserContext";
 import Header from "./Components/Header";
 import Content from "./Components/Content";
+import ReduceForm from "./ReduceForm";
 
 function App() {
   return (
     <div>
-      <Exemplo1 />
+      {/*    <Exemplo1 />
       <p>------------------------------------------</p>
       <ExeInput />
       <p>------------------------------------------</p>
@@ -25,7 +26,9 @@ function App() {
       <UserContextProvider>
         <Header />
         <Content />
-      </UserContextProvider>
+      </UserContextProvider> */}
+      <p>------------------------------------------</p>
+      <ReduceForm />
     </div>
   );
 }

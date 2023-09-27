@@ -5,10 +5,6 @@ const VideoElement = () => {
   const video = React.useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = React.useState(false);
 
-  React.useEffect(() => {
-    console.log("teste");
-  }, []);
-
   function forward() {
     if (video.current) video.current.currentTime += 2;
   }
