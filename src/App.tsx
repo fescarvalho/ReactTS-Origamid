@@ -1,40 +1,31 @@
 import React from "react";
-import Button from "./Button";
 
-function user() {
-  return {
-    nome: "Andre",
-    profissao: "Designer",
-  };
-}
-
-type User = {
-  nome: string;
-  profissao: string;
-};
+import ExeInput from "./ExeInput";
+import VideoElement from "./VideoElement";
+import CustomHook from "./CustomHook";
+import CustomHookUseFetch from "./CustomHookUseFetch";
+import Exemplo1 from "./Exemplo1";
+import { UserContextProvider } from "./Components/UserContext";
+import Header from "./Components/Header";
+import Content from "./Components/Content";
 
 function App() {
-  const [data, setData] = React.useState<null | User>(null);
-  const [total, setTotal] = React.useState(0);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setData(user());
-    }, 1000);
-  }, []);
-
   return (
     <div>
-      <div>
-        <p>Total: {total}</p>
-        <Button incrementar={setTotal} />
-      </div>
-
-      {data !== null && (
-        <div>
-          {data.nome}: {data.profissao}{" "}
-        </div>
-      )}
+      <Exemplo1 />
+      <p>------------------------------------------</p>
+      <ExeInput />
+      <p>------------------------------------------</p>
+      <VideoElement />
+      <p>------------------------------------------</p>
+      <CustomHook />
+      <p>------------------------------------------</p>
+      <CustomHookUseFetch />
+      <p>------------------------------------------</p>
+      <UserContextProvider>
+        <Header />
+        <Content />
+      </UserContextProvider>
     </div>
   );
 }
